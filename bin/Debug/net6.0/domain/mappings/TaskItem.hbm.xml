@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="todolist"
+                   namespace="todolist.domain.entity">
+    <class name="todolist.domain.entity.TaskItem" table="taskitem">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="title" column="title"/>
+        <property name="description" column="description"/>
+        <property name="createdDate" column="createdDate"/>
+        <property name="completionDate" column="completionDate"/>
+        <property name="isCompleted" column="isCompleted"/>
+        <many-to-one name="taskList" column="taskListId" class="todolist.domain.entity.TaskList"/>
+    </class>
+    <class name="todolist.domain.entity.TaskList" table="tasklist">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="name" column="name"/>
+    </class>
+</hibernate-mapping>

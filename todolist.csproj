@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="EntityFramework" Version="6.4.4" />
+        <PackageReference Include="FluentNHibernate" Version="3.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+        <PackageReference Include="MilestoneTG.NHibernate.Extensions.Mapping.Attributes" Version="1.0.13" />
+        <PackageReference Include="MySql.Data" Version="8.0.33" />
+        <PackageReference Include="MySql.Data.EntityFramework" Version="8.0.33" />
+        <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.22" />
+        <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.2" />
+        <PackageReference Include="NHibernate" Version="5.4.2" />
+        <PackageReference Include="NHibernate.Extensions" Version="3.0.0" />
+        <PackageReference Include="NHibernate.Mapping.Attributes" Version="5.1.0" />
+        <PackageReference Include="NHibernate.SimpleMapping" Version="1.0.20" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="System.Threading" Version="4.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Properties\launchSettings.json" />
+      <Resource Include="Properties\launchSettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="C:\Users\Paulo Henrique\.nuget\packages\mysql.data.entityframework\8.0.33\contentFiles\any\netstandard2.1\app.config.transform" />
+      <EmbeddedResource Include="C:\Users\Paulo Henrique\.nuget\packages\mysql.data.entityframework\8.0.33\contentFiles\any\netstandard2.1\app.config.transform" />
+      <Content Remove="appsettings.json" />
+      <EmbeddedResource Include="appsettings.json" />
+      <Content Remove="appsettings.Development.json" />
+      <EmbeddedResource Include="appsettings.Development.json" />
+      <None Remove="hibernate.cfg.xml" />
+      <EmbeddedResource Include="hibernate.cfg.xml">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="domain\mappings\TaskList.hbm.xml" />
+      <EmbeddedResource Include="domain\mappings\TaskList.hbm.xml">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="domain\mappings\TaskItem.hbm.xml" />
+      <EmbeddedResource Include="domain\mappings\TaskItem.hbm.xml">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
+</Project>
